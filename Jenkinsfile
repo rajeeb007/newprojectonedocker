@@ -1,5 +1,5 @@
 pipeline {
-    aget any
+    agent any
     environment {
         
         DOCKERHUB_CREDENTIALS = credentials('docker_key')
@@ -10,7 +10,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'raji_git', url: 'https://github.com/rajeeb007/newprojectonedocker.git'
             }
         }
-        
+
         stage('docker build') {
             steps {
                 sh 'docker build -t rajeeb007/docker-helloworld1:new one .'
