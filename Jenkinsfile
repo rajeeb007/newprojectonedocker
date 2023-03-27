@@ -16,6 +16,11 @@ pipeline {
                 sh 'docker build -t rajeeb007/docker-helloworld1:newone .'
             }
         }
+        stage('docker login') {
+            steps {
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+            }
+        }
         
     } 
     
