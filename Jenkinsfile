@@ -13,7 +13,7 @@ pipeline {
 
         stage('docker build') {
             steps {
-                sh 'docker build -t rajeeb007/docker-helloworld1:new one .'
+                sh 'docker build -t rajeeb007/docker-helloworld1:newone .'
             }
         }
         
