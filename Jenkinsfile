@@ -21,6 +21,11 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
+        stage('push to docker hub') {
+            steps {
+                sh 'docker push rajeeb007/docker-helloworld1:newone'
+            }
+        }
         
     } 
     
